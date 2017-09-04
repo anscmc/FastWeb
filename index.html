@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>FastWeb | Website Development for Your Small Business | Erie, PA</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="resources/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/style.css">
+
+        <script src="resources/waypoints/lib/noframework.waypoints.min.js"></script>
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        
+        <script type="text/javascript">
+            // Fade header in
+            function fadeOutDiv() {
+                var a = document.getElementById("whiteDiv");
+                a.className += " fadeOut";  
+                setTimeout(function(){
+                    a.className += " hide";      
+                }, 1000);  
+            }
+            
+            // Toggle mobile navigation menu
+            function showNav(){
+                $("div.divNav").fadeToggle("fast");
+                $("div.divNav").toggleClass("showNav fadeOut"); 
+                $("div.ham").toggleClass("hide");
+                $("div.xBtn").toggleClass("hide");
+            }
+            
+            // Scroll to element
+            $(document).on('click', 'a[href^="#"]', function(e) {
+            // target element id
+            var id = $(this).attr('href');
+
+            // target element
+            var $id = $(id);
+            if ($id.length === 0) {
+                return;
+            }
+
+            // prevent standard hash navigation (avoid blinking in IE)
+            e.preventDefault();
+
+            // top position relative to the document
+            var pos = $id.offset().top;
+
+            // animated top scrolling
+            $('body, html').animate({scrollTop: pos}, 750);
+            });
+            
+            // Header slideshow
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() { 
+              $('#slideshow > div:first')
+//                .fadeOut(1000)
+                .next()
+//                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+            },  3000);
+        </script>
+        
+    
+    </head>
+
+    <header id="head">
+        <div id="desknav">
+            
+        </div>
+        <img src="resources/img/logos/blacktrans.png" style="width:50%;margin-top:50px;">
+    </header>
+    <body>
+
+      
+    </body>  
+</html>
