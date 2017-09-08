@@ -12,9 +12,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="resources/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 
-        <script src="resources/waypoints/lib/noframework.waypoints.min.js"></script>
+        
         <script src="resources/jquery-3.2.1.min.js"></script>
+<!--        <script src="resources/waypoints/lib/noframework.waypoints.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         
@@ -68,13 +72,52 @@
                 .end()
                 .appendTo('#slideshow');
             },  3000);
+            
+            //Waypoints
+            
+            $(document).ready(function(){
+ 
+              // hide our element on page load
+              $('#element1').css('opacity', 0);
+                $('#one').css('opacity', 0);
+                $('#two').css('opacity', 0);
+                $('#three').css('opacity', 0);
+                $('#four').css('opacity', 0);
+                $('#five').css('opacity', 0);
+                $('#six').css('opacity', 0);
+
+              $('#element1').waypoint(function() {
+                  $('#element1').addClass('fadeIn');
+              }, { offset: '80%' });
+                
+                $('#one').waypoint(function() {
+                  $('#one').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#two').waypoint(function() {
+                  $('#two').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#three').waypoint(function() {
+                  $('#three').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                
+                $('#four').waypoint(function() {
+                  $('#four').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#five').waypoint(function() {
+                  $('#five').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#six').waypoint(function() {
+                  $('#six').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+
+            });
         </script>
     </head>
 
     <header id="head">
-        <img id="headIMG" src="resources/img/logos/blacktrans.png">
+        <img id="headIMG" class="animated fadeIn" src="resources/img/logos/blacktrans.png">
         <br>
-        <div id="linkwrap">
+        <div id="linkwrap" class="animated fadeInUp">
             <a href="#services" class="headBTN">Services</a>
             <a class="headBTN">Current Clients</a>
             <a class="headBTN">Testimonials</a>
@@ -84,7 +127,33 @@
     </header>
     <body>
         <div id="services">
-            
+            <div style="background-color: transparent;height:100px;"></div>
+            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700">Services We Offer</h1>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="color:white !important;font-size: 30px;">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <i id="one"  class="fa fa-code" aria-hidden="true"> <span style="font-family: gtELit;">Website Development</span></i>
+                        <br>
+                        <br>
+                        <i id="two" class="fa fa-server" aria-hidden="true"> <span style="font-family: gtELit;">Website Hosting</span></i>
+                        <br>
+                        <br>
+                        <i id="three" class="fa fa-search" aria-hidden="true"> <span style="font-family: gtELit;">Search Engine Optimization</span></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <i id="four" class="fa fa-mobile" aria-hidden="true"> <span style="font-family: gtELit;">Mobile Friendly Design</span></i>
+                        <br>
+                        <br>
+                        <i id="five" class="fa fa-pencil" aria-hidden="true"> <span style="font-family: gtELit;">Custom Forms</span></i>
+                        <br>
+                        <br>
+                        <i id="six" class="fa fa-camera" aria-hidden="true"> <span style="font-family: gtELit;">Custom Video &amp; Photography</span></i>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="ourwork">
             

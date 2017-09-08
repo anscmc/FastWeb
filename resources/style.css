@@ -2,6 +2,19 @@
 	font-family: gtRG;
 	src: url('fonts/gtRG.ttf');
 }
+@font-face {
+	font-family: gtELit;
+	src: url('fonts/gtELit.ttf');
+}
+
+body{
+/*    font-family: 'Source Sans Pro', sans-serif !important;*/
+    font-family: gtELit !important;
+}
+
+i{
+    font-family: gtELit;
+}
 
 #head{
     background-image: url(img/header/headback.jpg);
@@ -37,7 +50,7 @@
     color:white;
     background-color: #f0492f;
     border:1px solid #f0492f;
-    width:200px;
+    width:220px;
     height:40px;
     font-size:20px;
     line-height:40px;
@@ -75,4 +88,5 @@
     height: 100vh;
     background-image: url(img/3dbackground.jpg);
     background-repeat: repeat;
+    color:white;
 }
