@@ -6,14 +6,40 @@
 	font-family: gtELit;
 	src: url('fonts/gtELit.ttf');
 }
-
+@font-face {
+	font-family: gtBK;
+	src: url('fonts/gtBK.ttf');
+}
+@font-face {
+	font-family: gtIT;
+	src: url('fonts/gtIT.ttf');
+}
+@font-face {
+	font-family: gtEL;
+	src: url('fonts/gtEL.ttf');
+}
 body{
 /*    font-family: 'Source Sans Pro', sans-serif !important;*/
-    font-family: gtELit !important;
-}
+    font-family: gtIT;
 
+    text-shadow: 3px 3px 3px black;
+}
+.backgroundWrap{
+
+    background-image: url(img/3dbackground-light.jpg);
+    background-repeat: repeat;
+
+}
 i{
+    color:#f0492f;
+}
+span{
+    color:white;
+    font-family: gtEL;
+}
+h1{
     font-family: gtELit;
+    color:white;
 }
 
 #head{
@@ -22,13 +48,13 @@ i{
     height: 100vh;
     width: 100vw;
     text-align: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(img/header/headback.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/header/headback.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25))), url(img/header/headback.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(img/header/headback.jpg);
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
 }
-#headIMG{
+.headIMG{
     width:40%;
 }
 
@@ -36,11 +62,13 @@ i{
     #head{
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(img/header/headmob.jpg);
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/header/headmob.jpg);
+            background-attachment:local;
     }
-    #headIMG{
+    .headIMG{
         width:80%;
     }
 }
+
 
 #linkwrap{
     display:inline-block;
@@ -54,7 +82,8 @@ i{
     height:40px;
     font-size:20px;
     line-height:40px;
-    border-radius: 20px;
+    border-radius: 5px;
+    margin:5px;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     display:inline-block;
@@ -63,12 +92,13 @@ i{
 }
 .headBTN:hover{
     color: white;
-    background-color: rgba(0,0,0,.25);
+    background-color: rgba(0,0,0,.3);
     text-decoration: none;
     cursor: pointer;
     border:1px solid #f0492f;
     -webkit-box-shadow: 0px 0px 15px lightgrey;
     box-shadow: 0px 0px 15px lightgrey;
+    text-shadow:none;
 }
 .headBTN:active{
     color:white;
@@ -85,8 +115,99 @@ i{
 }
 
 #services{
-    height: 100vh;
-    background-image: url(img/3dbackground.jpg);
-    background-repeat: repeat;
+    background-color: transparent;
     color:white;
 }
+@media (max-width:767px){
+    #services span{
+    font-size:20px;
+}
+}
+
+#ourwork{
+    text-align: center;
+}
+#ourwork img{
+    margin:3%;
+}
+#contactus{
+    background-color: transparent;
+    color:white;
+    text-align: center;
+}
+#contactus h1{
+    text-align: center;
+}
+#contactus input{
+    margin:0 auto;
+}
+.co-sm-6 input{
+    max-width:500px;
+}
+#contactus div{
+    text-align: center;
+}
+#contactus a{
+    color:white;
+    margin: 0 auto;
+}
+#contactus a:hover{
+    text-decoration:none;
+}
+
+.demoWrap {
+        width: 100%;
+        height: calc(100% - 80px);
+        position: fixed;
+        top: 0px;
+        right: 0;
+}
+@media (min-width:1025px){
+    .demoWrap {
+        width: calc(100% + 17px);
+        height: calc(100% - 80px);
+        position: fixed;
+        top: 0px;
+        right: -17px;
+}
+}
+
+
+.hideFrame{
+    display: none;
+}
+.showc{
+    display: inherit;
+}
+.topShadow{
+    position:relative;
+    -webkit-box-shadow: 0px -10px 12px -8px;
+    box-shadow: 0px -10px 12px -8px;
+}
+.topShadow2{
+    position:relative;
+    -webkit-box-shadow: 0px -10px 12px -8px black;
+    box-shadow: 0px -10px 12px -6px black;
+}
+.bottomShadow{
+    position: relative;
+    -webkit-box-shadow: 0px 10px 12px -8px;
+    box-shadow: 0px 10px 12px -8px;
+}
+
+
+.demoFrame{
+   height:100%;
+    width: 100%;
+    display: block;
+}
+.clientLogos{
+    width:27%;display: inline;
+}
+@media (max-width:767px){
+    .clientLogos{
+    width:60%;
+        padding-top:10px;
+}
+}
+

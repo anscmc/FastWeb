@@ -17,7 +17,8 @@
         
         <script src="resources/jquery-3.2.1.min.js"></script>
 <!--        <script src="resources/waypoints/lib/noframework.waypoints.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>-->
+        <script src="resources/waypoints/lib/jquery.waypoints.min.js"></script>
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -33,12 +34,27 @@
             }
             
             // Toggle mobile navigation menu
-            function showNav(){
-                $("div.divNav").fadeToggle("fast");
-                $("div.divNav").toggleClass("showNav fadeOut"); 
-                $("div.ham").toggleClass("hide");
-                $("div.xBtn").toggleClass("hide");
+            function showLRB(){
+                $('#lrbFrame').fadeToggle("fast");
+                $('#lrbFrame').toggleClass("hideFrame animated fadeIn");
             }
+            function showIO(){
+                $('#ioFrame').fadeToggle("fast");
+                $('#ioFrame').toggleClass("hideFrame animated fadeIn");
+            }
+            function showFU(){
+                $('#fuFrame').fadeToggle("fast");
+                $('#fuFrame').toggleClass("hideFrame animated fadeIn");
+            }
+            function showIR(){
+                $('#irFrame').fadeToggle("fast");
+                $('#irFrame').toggleClass("hideFrame animated fadeIn");
+            }
+            function showLER(){
+                $('#lerFrame').fadeToggle("fast");
+                $('#lerFrame').toggleClass("hideFrame animated fadeIn");
+            }
+
             
             // Scroll to element
             $(document).on('click', 'a[href^="#"]', function(e) {
@@ -85,6 +101,17 @@
                 $('#four').css('opacity', 0);
                 $('#five').css('opacity', 0);
                 $('#six').css('opacity', 0);
+                $('#heading1').css('opacity', 0);
+                $('#heading2').css('opacity', 0);
+                $('#p1').css('opacity', 0);
+                $('#p2').css('opacity', 0);
+                $('#p3').css('opacity', 0);
+                $('#logo1').css('opacity', 0);
+                $('#logo2').css('opacity', 0);
+                $('#logo3').css('opacity', 0);
+                $('#logo4').css('opacity', 0);
+                $('#logo5').css('opacity', 0);
+                $('#takealook').css('opacity', 0);
 
               $('#element1').waypoint(function() {
                   $('#element1').addClass('fadeIn');
@@ -109,60 +136,221 @@
                 $('#six').waypoint(function() {
                   $('#six').addClass('animated fadeInUp');
               }, { offset: '80%' });
+                
+
+                $('#p1').waypoint(function() {
+                  $('#p1').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+
+                $('#p2').waypoint(function() {
+                  $('#p2').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+
+                $('#p3').waypoint(function() {
+                  $('#p3').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                
+                 $('#logo1').waypoint(function() {
+                  $('#logo1').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#logo2').waypoint(function() {
+                  $('#logo2').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#logo3').waypoint(function() {
+                  $('#logo3').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#logo4').waypoint(function() {
+                  $('#logo4').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                $('#logo5').waypoint(function() {
+                  $('#logo5').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+                 $('#takealook').waypoint(function() {
+                  $('#takealook').addClass('animated fadeInUp');
+              }, { offset: '80%' });
+
+
 
             });
         </script>
     </head>
 
-    <header id="head">
-        <img id="headIMG" class="animated fadeIn" src="resources/img/logos/blacktrans.png">
+    
+    <body>
+        <div class="backgroundWrap">
+        <header id="head" class="topShadow">
+        <br>
+        <br>
+        <img id="headIMG1" class="headIMG animated fadeIn" src="resources/img/logos/whitetrans.png">
+        <br>
+        <p style="font-style: italic;color:white;margin-left:10px;margin-right:10px;font-weight: bold;">Modern, affordable websites for your small business.</p>
         <br>
         <div id="linkwrap" class="animated fadeInUp">
+
             <a href="#services" class="headBTN">Services</a>
-            <a class="headBTN">Current Clients</a>
-            <a class="headBTN">Testimonials</a>
-            <a class="headBTN">Contact Us</a>
+            <a href="#ourwork" class="headBTN">Current Clients</a>
+            <a href="#contactus" class="headBTN">Contact Us</a>
         </div>
 
     </header>
-    <body>
-        <div id="services">
+        <div id="services" class="topShadow2" style="padding-top:100px;padding-bottom: 100px">
             <div style="background-color: transparent;height:100px;"></div>
-            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700">Services We Offer</h1>
-            <br>
+            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700">What We Offer</h1>
             <br>
             <br>
             <div class="container" style="color:white !important;font-size: 30px;">
                 <div class="row">
                     <div class="col-sm-6">
-                        <i id="one"  class="fa fa-code" aria-hidden="true"> <span style="font-family: gtELit;">Website Development</span></i>
+                        <i id="one"  class="fa fa-code" aria-hidden="true"> <span> Website Development</span></i>
                         <br>
                         <br>
-                        <i id="two" class="fa fa-server" aria-hidden="true"> <span style="font-family: gtELit;">Website Hosting</span></i>
+                        <i id="two" class="fa fa-server" aria-hidden="true"> <span> Website Hosting</span></i>
                         <br>
                         <br>
-                        <i id="three" class="fa fa-search" aria-hidden="true"> <span style="font-family: gtELit;">Search Engine Optimization</span></i>
+                        <i id="three" class="fa fa-search" aria-hidden="true"> <span> Search Engine Optimization</span></i>
                     </div>
                     <div class="col-sm-6">
-                        <i id="four" class="fa fa-mobile" aria-hidden="true"> <span style="font-family: gtELit;">Mobile Friendly Design</span></i>
+                        <i id="four" class="fa fa-mobile" aria-hidden="true"> <span> Mobile Friendly Design</span></i>
                         <br>
                         <br>
-                        <i id="five" class="fa fa-pencil" aria-hidden="true"> <span style="font-family: gtELit;">Custom Forms</span></i>
+                        <i id="five" class="fa fa-pencil" aria-hidden="true"> <span> Custom Forms</span></i>
                         <br>
                         <br>
-                        <i id="six" class="fa fa-camera" aria-hidden="true"> <span style="font-family: gtELit;">Custom Video &amp; Photography</span></i>
+                        <i id="six" class="fa fa-camera" aria-hidden="true"> <span> Custom Video &amp; Photography</span></i>
                     </div>
                 </div>
+                <br>
+            <br>
+                <h2 id="Easy" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Easy</h2>
+            <p style="font-size: 18px;" id="p1">Getting the perfect website is easy with FastWeb. You'll get exactly what you want, hassle-free! Please give us a call or send us a message to get started.</p>
+                <h2 id="Affordable" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Affordable</h2>
+                <p style="font-size: 18px;" id="p2">High quailty websites at a fraction of the cost of local competitors. We guarantee you'll pay less and be more satisfied.</p>
+                <h2 id="Fast" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Fast</h2>
+                <p style="font-size: 18px;" id="p3">After a brief conversation about you and your business, we can have your site up and running in as little as a week!</p>
+                <br>
+                <div style="text-align: center;display: block;width:100%;">
+                <a id="takealook" href="#ourwork" class="headBTN" style="text-align: center;display: inline-block !important;margin:0 !important;">Our Work <i style="color:white;" class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                </div>
+                
             </div>
         </div>
-        <div id="ourwork">
+        <div id="ourwork" style="padding-top:100px;padding-bottom: 100px">
+            <br>
+            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700;">Our Clients</h1>
+            <br>
+            <p style="font-style: italic;color:white;">Tap or click an image to test a live demo</p>
+
+            <a onclick="showLRB()" style="cursor: pointer;"><img id="logo1" src="resources/img/logos2/lrb.png" class="clientLogos"></a>
+            <a onclick="showIO()" style="cursor: pointer;"><img id="logo2" src="resources/img/logos2/io.png" class="clientLogos" ></a>
+            <a  onclick="showFU()" style="cursor: pointer;"><img id="logo3" src="resources/img/logos2/fitu.png" class="clientLogos" ></a>
+            <br>
+            <a onclick="showIR()" style="cursor: pointer;"><img id="logo4"  src="resources/img/logos2/irock.png" class="clientLogos" ></a>
+            <a  onclick="showLER()" style="cursor: pointer;"><img id="logo5" src="resources/img/logos2/ler.png" class="clientLogos" ></a>
+        </div>
+<!--
+        <div id="testimonials" style="padding-top:50px;padding-bottom: 50px">
             
         </div>
-        <div id="testimonials">
+-->
+        <div id="contactus" style="padding-top:100px;padding-bottom: 100px">
+            <br>
+            <h1>Contact Us</h1>
+            <br>
+            <a style="font-size:20px;"><i style="color: #f0492f;font-size:20px" class="fa fa-phone" aria-hidden="true"></i> 814-592-2171</a>
+            <br>
+            <br>
+            <a style="font-size:20px;"><i style="color: #f0492f;font-size:20px;" class="fa fa-envelope" aria-hidden="true"></i> info@fastweberie.com</a>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <h2 style="font-size: 22px;">OR</h2>
+
+                <p>Fill out this form with your inquiry and we will respond as soon as possible.</p>
+                <br>
+                <form data-forge-name="Franchise" style="text-align: center">
+                <div class="row">
+                    
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="first">First Name</label>
+                            <input type="text" data-forge-name="First" class="form-control" id="first" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="last">Last Name</label>
+                            <input type="text" data-forge-name="Last" class="form-control" id="last" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" data-forge-name="Email" class="form-control" id="email" required>
+                          </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="number" data-forge-name="phone" class="form-control" id="phone" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" data-forge-name="City" class="form-control" id="city">
+                          </div>
+                            <div class="form-group">
+                                <label for="st">State</label>
+                                <input type="text" data-forge-name="State" class="form-control" id="st">
+                            </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                                <label for="des">Description/Comments</label>
+                                <input type="text" data-forge-name="Comments" class="form-control" id="des">
+                        </div>
+                    </div>
+                </div>
+                    <br>
+                        <div style="text-align:center" style="margin-left:10px;">
+                            <a class="headBTN">Send Request</a>
+<!--                                <input type="submit" value="Request Information" class="btn btn-default reqBTN">-->
+                            </div>
+                        </form>
+            </div>
             
         </div>
-        <div id="contactus">
+            </div>
+        <div id="lrbFrame" class="demoWrap hideFrame">
+            <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showLRB()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
+            
+            <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
+                <iframe class="demoFrame" src="https://www.levelredboxing.com/" frameborder="0" margin-right:-10px;></iframe>
+            </div>
+        </div>
+        <div id="ioFrame" class="demoWrap hideFrame">
+            <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showIO()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
+            <iframe class="demoFrame" src="https://www.ironoxygenfitness.com/" ></iframe>
+            <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
+                <iframe class="demoFrame" src="https://www.ironoxygenfitness.com/" ></iframe>
+            </div>
+        </div>
+        <div id="fuFrame" class="demoWrap hideFrame">
+            <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showFU()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
+            <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
+                <iframe class="demoFrame" src="https://www.fitnesserie.com/" ></iframe>
+            </div>
             
         </div>
+        <div id="irFrame" class="demoWrap hideFrame">
+            <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showIR()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
+            
+            <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
+                <iframe class="demoFrame" src="https://www.irockfitnesserie.com/"></iframe>
+            </div>
+        </div>
+        <div id="lerFrame" class="demoWrap hideFrame">
+            <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showLER()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
+            
+            <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
+                <iframe class="demoFrame" src="https://www.lakeerierubber.com/"></iframe>
+            </div>
+        </div>
+        
     </body>  
 </html>
