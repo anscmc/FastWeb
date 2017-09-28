@@ -32,14 +32,7 @@
 
         
         <script type="text/javascript">
-            // Fade header in
-            function fadeOutDiv() {
-                var a = document.getElementById("whiteDiv");
-                a.className += " fadeOut";  
-                setTimeout(function(){
-                    a.className += " hide";      
-                }, 1250);  
-            }
+
             
             function showNav(){
                 $("div.navigation").fadeToggle("fast");
@@ -90,24 +83,11 @@
             $('body, html').animate({scrollTop: pos}, 750);
             });
             
-            // Header slideshow
-            $("#slideshow > div:gt(0)").hide();
 
-            setInterval(function() { 
-              $('#slideshow > div:first')
-//                .fadeOut(1000)
-                .next()
-//                .fadeIn(1000)
-                .end()
-                .appendTo('#slideshow');
-            },  3000);
             
             //Waypoints
             
             $(document).ready(function(){
-                setInterval(function() {
-                    $('#bouncing').toggleClass("bounce");
-                }, 2500);
  
                 // hide our element on page load
                 $('#one').css('opacity', 0);
@@ -215,13 +195,13 @@
         </script>
     </head>
 
-    <header id="head" class="topShadow">
+    <header id="head" class="topShadow animated jackInTheBox">
 
-            <img style="margin-top:25px" id="headIMG1" class="headIMG animated fadeIn" src="resources/img/logos/whitetrans.png">
+            <img style="margin-top:25px" id="headIMG1" class="headIMG" src="resources/img/logos/whitetrans.png">
             <br>
-            <p class="animated fadeIn" style="font-style: italic;color:white;margin-left:10px;margin-right:10px;font-weight: 400;">Modern, affordable websites for your small business</p>
+            <p style="font-style: italic;color:white;margin-left:10px;margin-right:10px;font-weight: 400;">Modern, affordable websites for your small business</p>
             <br>
-            <div id="linkwrap" class="animated fadeIn">
+            <div id="linkwrap">
 
                 <a href="#services" class="headBTN">About Us</a>
                 <a href="#ourwork" class="headBTN">Our Clients</a>
@@ -230,8 +210,8 @@
         <div style="width:100%;height:75px;"></div>
 
         
-        <a href="#services" class="animated fadeIn"><div id="bouncing" class="animated">
-            <i style="font-size:40px;" class="fa fa-chevron-down" aria-hidden="true"></i>
+        <a href="#services"><div>
+            <i style="font-size:40px;color:white;" class="fa fa-chevron-down" aria-hidden="true"></i>
         </div></a>
         
         </header>
