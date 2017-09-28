@@ -5,14 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>FastWeb | Website Development for Your Small Business | Erie, PA</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="High quailty websites at a fraction of the cost of local competitors. We guarantee you'll pay less and be more satisfied. FastWeb in Erie, PA.">
+        <meta name="keywords" content="website, websites, erie, pa, erie pa, cheap websites, web design, web development">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f0492f">
+        <meta name="theme-color" content="#000000">
         
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="resources/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/style.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,500,700" rel="stylesheet">
 
         
         <script src="resources/jquery-3.2.1.min.js"></script>
@@ -30,7 +38,12 @@
                 a.className += " fadeOut";  
                 setTimeout(function(){
                     a.className += " hide";      
-                }, 1000);  
+                }, 1250);  
+            }
+            
+            function showNav(){
+                $("div.navigation").fadeToggle("fast");
+
             }
             
             // Toggle mobile navigation menu
@@ -92,9 +105,11 @@
             //Waypoints
             
             $(document).ready(function(){
+                setInterval(function() {
+                    $('#bouncing').toggleClass("bounce");
+                }, 2500);
  
-              // hide our element on page load
-              $('#element1').css('opacity', 0);
+                // hide our element on page load
                 $('#one').css('opacity', 0);
                 $('#two').css('opacity', 0);
                 $('#three').css('opacity', 0);
@@ -103,158 +118,226 @@
                 $('#six').css('opacity', 0);
                 $('#heading1').css('opacity', 0);
                 $('#heading2').css('opacity', 0);
-                $('#p1').css('opacity', 0);
-                $('#p2').css('opacity', 0);
-                $('#p3').css('opacity', 0);
+                $('#fast').css('opacity', 0);
+                $('#east').css('opacity', 0);
+                $('#affordable').css('opacity', 0);
                 $('#logo1').css('opacity', 0);
                 $('#logo2').css('opacity', 0);
                 $('#logo3').css('opacity', 0);
                 $('#logo4').css('opacity', 0);
                 $('#logo5').css('opacity', 0);
+                $("logo1").css('opacity', 0);
+                $("logo2").css('opacity', 0);
+                $("logo3").css('opacity', 0);
+                $("logo4").css('opacity', 0);
+                $("logo5").css('opacity', 0);
                 $('#takealook').css('opacity', 0);
-
-              $('#element1').waypoint(function() {
-                  $('#element1').addClass('fadeIn');
-              }, { offset: '80%' });
+                $('#fast').css('opacity', 0);
+                $('#easy').css('opacity', 0);
+                $('#affordable').css('opacity', 0); 
+                $('#nav').css('opacity', 0); 
                 
+                // waypoints
+                $('#nav').waypoint(function() {
+                 $('#nav').addClass('animated fadeIn');
+              }, { offset: '25%' });
+
                 $('#one').waypoint(function() {
                   $('#one').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#two').waypoint(function() {
                   $('#two').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#three').waypoint(function() {
                   $('#three').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 
                 $('#four').waypoint(function() {
                   $('#four').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#five').waypoint(function() {
                   $('#five').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#six').waypoint(function() {
                   $('#six').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 
 
-                $('#p1').waypoint(function() {
-                  $('#p1').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+                $('#fast').waypoint(function() {
+                  $('#fast').addClass('animated fadeInUp');
+              }, { offset: '90%' });
 
-                $('#p2').waypoint(function() {
-                  $('#p2').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+                $('#easy').waypoint(function() {
+                  $('#easy').addClass('animated fadeInUp');
+              }, { offset: '90%' });
 
-                $('#p3').waypoint(function() {
-                  $('#p3').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+                $('#affordable').waypoint(function() {
+                  $('#affordable').addClass('animated fadeInUp');
+              }, { offset: '90%' });
                 
                  $('#logo1').waypoint(function() {
-                  $('#logo1').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+                  $('#logo1').addClass('animated fadeInLeft');
+              }, { offset: '90%' });
                 $('#logo2').waypoint(function() {
                   $('#logo2').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#logo3').waypoint(function() {
-                  $('#logo3').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+                  $('#logo3').addClass('animated fadeInRight');
+              }, { offset: '90%' });
                 $('#logo4').waypoint(function() {
                   $('#logo4').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
                 $('#logo5').waypoint(function() {
                   $('#logo5').addClass('animated fadeInUp');
-              }, { offset: '80%' });
+              }, { offset: '90%' });
+                
+                $("logo1").waypoint(function() {
+                  $("logo1").addClass('animated fadeInLeft');
+              }, { offset: '90%' });
+                $("logo2").waypoint(function() {
+                  $("logo2").addClass('animated fadeInUp');
+              }, { offset: '90%' });
+                $("logo3").waypoint(function() {
+                  $("logo3").addClass('animated fadeInRight');
+              }, { offset: '90%' });
+                $("logo4").waypoint(function() {
+                  $("logo4").addClass('animated fadeInUp');
+              }, { offset: '90%' });
+                $("logo5").waypoint(function() {
+                  $("logo5").addClass('animated fadeInUp');
+              }, { offset: '90%' });
+                
                  $('#takealook').waypoint(function() {
                   $('#takealook').addClass('animated fadeInUp');
-              }, { offset: '80%' });
-
-
+              }, { offset: '90%' });
 
             });
         </script>
     </head>
 
-    
+    <header id="head" class="topShadow">
+
+            <img style="margin-top:25px" id="headIMG1" class="headIMG animated fadeIn" src="resources/img/logos/whitetrans.png">
+            <br>
+            <p class="animated fadeIn" style="font-style: italic;color:white;margin-left:10px;margin-right:10px;font-weight: 400;">Modern, affordable websites for your small business</p>
+            <br>
+            <div id="linkwrap" class="animated fadeIn">
+
+                <a href="#services" class="headBTN">About Us</a>
+                <a href="#ourwork" class="headBTN">Our Clients</a>
+                <a href="#contactus" class="headBTN">Contact Us</a>
+            </div>
+        <div style="width:100%;height:75px;"></div>
+
+        
+        <a href="#services" class="animated fadeIn"><div id="bouncing" class="animated">
+            <i style="font-size:40px;" class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div></a>
+        
+        </header>
     <body>
+        <div id="nav">
+                <a href="#head" style="cursor: pointer"><img id="navimg" src="resources/img/logos/whitetrans.png"></a>
+                <i onclick="showNav()" id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
+            </div>
         <div class="backgroundWrap">
-        <header id="head" class="topShadow">
-        <br>
-        <br>
-        <img id="headIMG1" class="headIMG animated fadeIn" src="resources/img/logos/whitetrans.png">
-        <br>
-        <p style="font-style: italic;color:white;margin-left:10px;margin-right:10px;font-weight: bold;">Modern, affordable websites for your small business.</p>
-        <br>
-        <div id="linkwrap" class="animated fadeInUp">
+        <div id="services" style="padding-top:50px;padding-bottom:80px;">
+            
+            
+            <br>
 
-            <a href="#services" class="headBTN">Services</a>
-            <a href="#ourwork" class="headBTN">Current Clients</a>
-            <a href="#contactus" class="headBTN">Contact Us</a>
-        </div>
-
-    </header>
-        <div id="services" class="topShadow2" style="padding-top:100px;padding-bottom: 100px">
-            <div style="background-color: transparent;height:100px;"></div>
-            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700">What We Offer</h1>
+            <h1 id="element1" class="animated" style="text-align: center;font-weight:700">About Us</h1>
             <br>
             <br>
-            <div class="container" style="color:white !important;font-size: 30px;">
+            <div class="container" style="color:white !important;">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <i id="one"  class="fa fa-code" aria-hidden="true"> <span> Website Development</span></i>
-                        <br>
-                        <br>
-                        <i id="two" class="fa fa-server" aria-hidden="true"> <span> Website Hosting</span></i>
-                        <br>
-                        <br>
-                        <i id="three" class="fa fa-search" aria-hidden="true"> <span> Search Engine Optimization</span></i>
+                    <div id="one" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i   class="fa fa-code" aria-hidden="true"> <span> Website Development</span></i>
+                        <p>Most web developement companies use templates to create websites. We build websites from the ground up. This means that your site will be unique and stand out from the competitors.</p>
                     </div>
-                    <div class="col-sm-6">
-                        <i id="four" class="fa fa-mobile" aria-hidden="true"> <span> Mobile Friendly Design</span></i>
-                        <br>
-                        <br>
-                        <i id="five" class="fa fa-pencil" aria-hidden="true"> <span> Custom Forms</span></i>
-                        <br>
-                        <br>
-                        <i id="six" class="fa fa-camera" aria-hidden="true"> <span> Custom Video &amp; Photography</span></i>
+                    <div id="two" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i  class="fa fa-server" aria-hidden="true"> <span> Website Hosting</span></i>
+                        <p>Our web hosting services are blazing fast and reliable so your clients will always have a great experience on your site.</p>
+                    </div>
+                    <div id="three" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i  class="fa fa-search" aria-hidden="true"> <span> Search Engine Optimization</span></i>
+                        <p>It's important for potential clients to find your website, and it all starts here. Search engine optimization is a fancy word for how high your site ranks in searches on sites like Google or Yahoo. We'll take care of making sure your site gets the ranking you deserve.</p>
+                    </div>
+                    <div id="four" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i  class="fa fa-mobile" aria-hidden="true"> <span> Mobile Friendly Design</span></i>
+                        <p>In 2016, mobile internet use surpassed desktop computer internet use for the first time in history. Today, your potential clients will quickly exit your site if it's not mobile friendly. It's more important now than ever to have a site works and looks great on mobile devices. </p>
+                    </div>
+                    <div id="five" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i  class="fa fa-pencil" aria-hidden="true"> <span> Custom Forms</span></i>
+                        <p>Take advantage of forms that users can fill out to contact you. These can be used for price quotes, general inquiries, promotions, etc.</p>
+                    </div>
+                    <div id="six" class="col-md-4" style="margin-top:20px;text-align:left;">
+                        <i  class="fa fa-camera" aria-hidden="true"> <span> Custom Video &amp; Photography</span></i>
+                        <p>Custom photography and/or video is one of the key components of a unique website. You can give your clients and potential clients a clearer understanding of your services with our custom video and photography design. </p>
                     </div>
                 </div>
-                <br>
+            </div>
             <br>
-                <h2 id="Easy" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Easy</h2>
-            <p style="font-size: 18px;" id="p1">Getting the perfect website is easy with FastWeb. You'll get exactly what you want, hassle-free! Please give us a call or send us a message to get started.</p>
-                <h2 id="Affordable" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Affordable</h2>
-                <p style="font-size: 18px;" id="p2">High quailty websites at a fraction of the cost of local competitors. We guarantee you'll pay less and be more satisfied.</p>
-                <h2 id="Fast" style="border-left:2px solid #f0492f;padding-left:3px;font-weight: bold">Fast</h2>
-                <p style="font-size: 18px;" id="p3">After a brief conversation about you and your business, we can have your site up and running in as little as a week!</p>
-                <br>
-                <div style="text-align: center;display: block;width:100%;">
+            <div style="text-align: center;display: block;width:100%;">
                 <a id="takealook" href="#ourwork" class="headBTN" style="text-align: center;display: inline-block !important;margin:0 !important;">Our Work <i style="color:white;" class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                </div>
+        </div>
+        <div id="ourwork" style="padding-top:50px;padding-bottom:80px;">
+            <br>
+            <br>
+            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700;">Our Clients</h1>
+
+            <div class="demos">
+                <p style="font-style: italic;color:white;">Tap or click an image to test a live demo</p>
+                <a onclick="showLRB()" style="cursor: pointer;"><img id="logo1" src="resources/img/logos2/lrb.png" class="clientLogos"></a>
+                <a onclick="showIO()" style="cursor: pointer;"><img id="logo2" src="resources/img/logos2/io.png" class="clientLogos" ></a>
+                <a  onclick="showFU()" style="cursor: pointer;"><img id="logo3" src="resources/img/logos2/fitu.png" class="clientLogos" ></a>
+                <br>
+                <a  onclick="showIR()" style="cursor: pointer;"><img id="logo4"  class="demos" src="resources/img/logos2/irock.png" class="clientLogos" ></a>
+                <a  onclick="showLER()" style="cursor: pointer;"><img id="logo5" src="resources/img/logos2/ler.png" class="clientLogos" ></a>
+            </div>
+            <div class="tabs" style="display:none;">
+                <p style="font-style: italic;color:white;font-weight: 200">Tap or click an image to open the site in a new tab</p>
+                <a target="_blank" href="https://www.levelredboxing.com" style="cursor: pointer;"><img src="resources/img/logos2/lrb.png" class="clientLogos logo1"></a>
+                <a target="_blank" href="https://www.ironoxygenfitness.com" style="cursor: pointer;"><img  src="resources/img/logos2/io.png" class="clientLogos logo2" ></a>
+                <a  target="_blank" href="https://www.fitnesserie.com" style="cursor: pointer;"><img  src="resources/img/logos2/fitu.png" class="clientLogos logo3" ></a>
+                <br>
+                <a  target="_blank" href="https://www.irockfitnesserie.com" style="cursor: pointer;"><img  class="clientLogos logo4" src="resources/img/logos2/irock.png" class="clientLogos" ></a>
+                <a  target="_blank" href="https://www.lakeerierubber.com" style="cursor: pointer;"><img  src="resources/img/logos2/ler.png" class="clientLogos logo5" ></a>
+            </div>
+        </div>
+            <div id="onetwothree" style="padding-top:50px;padding-bottom:80px;">
+
+
+            <br>
+            <br>
+            <div class="container" style="color:white !important;">
+                <div class="row">
+                    <div id="fast" class="col-md-4">
+                    <h2 style="padding-left:3px;font-size: 24px !important;"><img src="resources/img/logos/arrow.png" style="height:24px;"> Fast</h2>
+                <p id="p3">After a brief conversation about you and your business, we can have your site up and running in as little as a week!</p>
+                    </div>
+                    <div id="affordable" class="col-md-4">
+                    <h2  style="padding-left:3px;font-size: 24px !important;"><img src="resources/img/logos/arrow.png" style="height:24px;"> Affordable</h2>
+                <p id="p2">High quailty websites at a fraction of the cost of local competitors. We guarantee you'll pay less and be more satisfied.</p>
+                    </div>
+                    <div id="easy" class="col-md-4">
+                    <h2 style="padding-left:3px;font-size: 24px !important;"><img src="resources/img/logos/arrow.png" style="height:24px;"> Easy</h2>
+            <p id="p1">Getting the perfect website is easy with FastWeb. You'll get exactly what you want, hassle-free! Please give us a call or send us a message to get started.</p>
+                    </div>
+                    
                 </div>
                 
             </div>
-        </div>
-        <div id="ourwork" style="padding-top:100px;padding-bottom: 100px">
-            <br>
-            <h1 id="element1" class="animated" style="margin-top:0;text-align: center;font-weight:700;">Our Clients</h1>
-            <br>
-            <p style="font-style: italic;color:white;">Tap or click an image to test a live demo</p>
-
-            <a onclick="showLRB()" style="cursor: pointer;"><img id="logo1" src="resources/img/logos2/lrb.png" class="clientLogos"></a>
-            <a onclick="showIO()" style="cursor: pointer;"><img id="logo2" src="resources/img/logos2/io.png" class="clientLogos" ></a>
-            <a  onclick="showFU()" style="cursor: pointer;"><img id="logo3" src="resources/img/logos2/fitu.png" class="clientLogos" ></a>
-            <br>
-            <a onclick="showIR()" style="cursor: pointer;"><img id="logo4"  src="resources/img/logos2/irock.png" class="clientLogos" ></a>
-            <a  onclick="showLER()" style="cursor: pointer;"><img id="logo5" src="resources/img/logos2/ler.png" class="clientLogos" ></a>
         </div>
 <!--
         <div id="testimonials" style="padding-top:50px;padding-bottom: 50px">
             
         </div>
 -->
-        <div id="contactus" style="padding-top:100px;padding-bottom: 100px">
+        <div id="contactus" style="padding-top:50px;padding-bottom:50px">
             <br>
-            <h1>Contact Us</h1>
+            <h1 style="font-weight: 700;">Contact Us</h1>
             <br>
             <a style="font-size:20px;"><i style="color: #f0492f;font-size:20px" class="fa fa-phone" aria-hidden="true"></i> 814-592-2171</a>
             <br>
@@ -262,13 +345,13 @@
             <a style="font-size:20px;"><i style="color: #f0492f;font-size:20px;" class="fa fa-envelope" aria-hidden="true"></i> info@fastweberie.com</a>
             <br>
             <br>
-            <br>
-            <div class="container">
-                <h2 style="font-size: 22px;">OR</h2>
 
+            <div class="container">
+                <h2 style="font-size: 22px;font-weight: bold;text-align: center;">OR</h2>
+<br>
                 <p>Fill out this form with your inquiry and we will respond as soon as possible.</p>
                 <br>
-                <form data-forge-name="Franchise" style="text-align: center">
+                <form id="form1" data-forge-name="Franchise" style="text-align: center">
                 <div class="row">
                     
                     <div class="col-sm-6">
@@ -292,40 +375,41 @@
                           </div>
                           <div class="form-group">
                             <label for="city">City</label>
-                            <input type="text" data-forge-name="City" class="form-control" id="city">
+                            <input type="text" data-forge-name="City" class="form-control" id="city" required>
                           </div>
                             <div class="form-group">
                                 <label for="st">State</label>
-                                <input type="text" data-forge-name="State" class="form-control" id="st">
+                                <input type="text" data-forge-name="State" class="form-control" id="st" required>
                             </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                                 <label for="des">Description/Comments</label>
-                                <input type="text" data-forge-name="Comments" class="form-control" id="des">
+                                <input type="text" data-forge-name="Comments" class="form-control" id="des" required>
                         </div>
                     </div>
                 </div>
                     <br>
                         <div style="text-align:center" style="margin-left:10px;">
-                            <a class="headBTN">Send Request</a>
+<!--                            <a class="headBTN">Send Request</a>-->
+                            <input type="submit" style="text-shadow: 2px 2px 2px black" value="Send" class="headBTN">
 <!--                                <input type="submit" value="Request Information" class="btn btn-default reqBTN">-->
                             </div>
                         </form>
             </div>
             
         </div>
+            <div style="width:100%;text-align: center;color: white;"><a style="color:white !important;text-decoration: none !important;">Copyright &copy; 2017 FastWeb</a></div>
             </div>
+        <br>
         <div id="lrbFrame" class="demoWrap hideFrame">
             <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showLRB()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
-            
             <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
                 <iframe class="demoFrame" src="https://www.levelredboxing.com/" frameborder="0" margin-right:-10px;></iframe>
             </div>
         </div>
         <div id="ioFrame" class="demoWrap hideFrame">
             <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showIO()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
-            <iframe class="demoFrame" src="https://www.ironoxygenfitness.com/" ></iframe>
             <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
                 <iframe class="demoFrame" src="https://www.ironoxygenfitness.com/" ></iframe>
             </div>
@@ -335,22 +419,30 @@
             <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
                 <iframe class="demoFrame" src="https://www.fitnesserie.com/" ></iframe>
             </div>
-            
         </div>
         <div id="irFrame" class="demoWrap hideFrame">
             <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showIR()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
-            
             <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
                 <iframe class="demoFrame" src="https://www.irockfitnesserie.com/"></iframe>
             </div>
         </div>
         <div id="lerFrame" class="demoWrap hideFrame">
             <a class="bottomShadow" style="display: block;width: 100%;height:80px;background-color: black;text-align: center;cursor: pointer;line-height:80px;text-decoration: none !important;" onclick="showLER()"><span style="color:white;width: 100%;font-size: 30px;font-weight: bold;z-index: 1000;text-decoration: none !important;"><span style="color:#f0492f">X</span> Exit Demo</span></a>
-            
             <div id="frameWrap" style="overflow:auto;-webkit-overflow-scrolling:touch;height:100%">
                 <iframe class="demoFrame" src="https://www.lakeerierubber.com/"></iframe>
             </div>
         </div>
         
     </body>  
+         <div class="navigation" style="text-align: center">
+         <br>
+
+            <a onclick="showNav()" id="cartX">X</a>
+
+<div style="height:20vh;width:100%;"></div>
+             <a onclick="showNav()" class="navItem" href="#services">About Us</a>
+             <a onclick="showNav()" class="navItem" href="#ourwork">Our Clients</a>
+             <a onclick="showNav()" class="navItem" href="#contactus">Contact Us</a>
+            
+        </div>
 </html>
